@@ -23,9 +23,9 @@ public partial class ManejoUsuariosContext : DbContext
     {
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("Usuarios_pk");
+            entity.HasKey(e => e.id).HasName("Usuarios_pk");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.id).ValueGeneratedNever();
             entity.Property(e => e.Apellido)
                 .HasMaxLength(50)
                 .IsUnicode(false);
